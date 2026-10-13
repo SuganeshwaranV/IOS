@@ -1,0 +1,90 @@
+Data types:
+
+Int
+
+var age: Int = 21
+var marks: Int = 95
+
+print(age)
+print(marks)
+
+(or)
+
+var age = 21
+var mark = 95
+print(age)
+print(marks)
+
+Output:
+
+21
+95
+
+Double
+
+var price: Double = 99.50
+var percentage: Double = 85.75
+
+print(price)
+print(percentage)
+
+(or)
+
+var price = 99.50
+var percentage = 85.75
+
+print(price)
+print(percentage)
+
+Output:
+
+99.50
+85.75
+
+String:
+
+var name: String = "Arun"
+var language: String = "Swift"
+
+print(name)
+print(language)
+
+(or)
+
+var name = "Arun"
+var language = "Swift"
+
+print(name)
+print(language)
+
+Output:
+
+Arun
+Swift
+
+var name = "Arun"
+var age = 21
+
+print("My name is \(name)")
+print("My age is \(age)")
+
+Output:
+
+My name is Arun
+My age is 21
+
+Bool:
+
+var isLoggedIn : bool = true (or) var isLoggedIn = true
+
+if isLoggedIn {
+    print("Welcome to the app")
+} else {
+    print("Please log in")
+}
+
+Output:
+
+Welcome to the app
+
+
