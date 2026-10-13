@@ -1,0 +1,55 @@
+Start with the basic code of swift:
+ 
+print("Hello, World!")
+print("Welcome to iOS Development")
+
+Output:
+
+Hello, World!
+Welcome to iOS Development
+
+//
+
+print(100)
+print(10 + 20)
+print("10 + 20")
+
+Output:
+
+100
+30
+10 + 20
+
+//
+"var"
+
+A var variable can change its value.
+
+var age = 21
+print(age)
+
+Output:
+
+21
+
+var age = 21
+age = 22
+print(age)
+
+Output:
+
+22
+
+//
+"let"
+ 
+A let constant cannot be reassigned after its initial value.
+
+let country = "India"
+print(country)
+
+Output:
+
+India
+
+
