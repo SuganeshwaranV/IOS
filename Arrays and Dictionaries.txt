@@ -1,0 +1,293 @@
+Arrays and Dictionaries
+
+Arrays- Create an array
+
+var fruits = ["Apple", "Mango", "Orange"]
+
+print(fruits)
+
+Output:
+
+["Apple", "Mango", "Orange"]
+
+
+You can also create an empty array with an explicit type:
+
+var names: [String] = []
+var numbers: [Int] = []
+
+Here, [String] means an array of strings, and [Int] means an array of integers.
+
+Access array elements
+
+The index tells Swift which position to access.
+
+let fruits = ["Apple", "Mango", "Orange"]
+
+print(fruits[0])
+print(fruits[1])
+print(fruits[2])
+
+Output:
+
+Apple
+Mango
+Orange
+
+let fruits = ["Apple", "Mango", "Orange"]
+
+print(fruits.count)
+
+Output:
+
+3
+
+Add values to an array
+
+var fruits = ["Apple", "Mango"]
+
+fruits.append("Orange")
+
+print(fruits)
+
+Output:
+
+["Apple", "Mango", "Orange"]
+
+
+var fruits = ["Apple", "Orange"]
+
+fruits.insert("Mango", at: 1)
+
+print(fruits)
+
+Output:
+
+["Apple", "Mango", "Orange"]
+
+Update an array value
+
+var fruits = ["Apple", "Mango", "Orange"]
+
+fruits[1] = "Banana"
+
+print(fruits)
+
+Output:
+
+["Apple", "Banana", "Orange"]
+
+
+Remove an array value
+
+var fruits = ["Apple", "Mango", "Orange"]
+
+fruits.remove(at: 1)
+
+print(fruits)
+
+Output:
+
+["Apple", "Orange"]
+
+
+var fruits = ["Apple", "Mango", "Orange"]
+
+fruits.removeLast()
+
+print(fruits)
+
+Output:
+
+["Apple", "Mango"]
+
+Loop through an array
+
+
+let fruits = ["Apple", "Mango", "Orange"]
+
+for fruit in fruits {
+    print(fruit)
+}
+
+Output:
+
+Apple
+Mango
+Orange
+
+
+let fruits = ["Apple", "Mango", "Orange"]
+
+for (index, fruit) in fruits.enumerated() {
+    print(index, fruit)
+}
+
+Output:
+
+0 Apple
+1 Mango
+2 Orange
+
+Dictionaries
+
+Create a dictionary
+
+storing a user's profile details.
+
+let user = [
+    "name": "Arun",
+    "city": "Chennai",
+    "course": "iOS Development"
+]
+
+print(user)
+
+The order of dictionary entries in the output isn't guaranteed.
+
+You can explicitly declare a dictionary's types:
+
+var marks: [String: Int] = [
+    "Maths": 90,
+    "Science": 85,
+    "English": 88
+]
+
+Here, [String: Int] means the keys are strings and the values are integers.
+
+Access dictionary values
+
+Use a key to access the corresponding value.
+
+let user = [
+    "name": "Arun",
+    "city": "Chennai"
+]
+
+print(user["name"] ?? "Unknown")
+print(user["city"] ?? "Unknown")
+
+Output:
+
+Arun
+Chennai
+
+Why do we use ?? "Unknown"?
+
+A dictionary lookup may fail if the key doesn't exist. Swift represents the result as an optional value. The ?? operator provides a fallback when the value is missing.
+
+For example:
+
+let user = ["name": "Arun"]
+
+print(user["age"] ?? "Not found")
+
+Output:
+
+Not found
+
+Add a dictionary value
+
+var user = [
+    "name": "Arun",
+    "city": "Chennai"
+]
+
+user["age"] = "21"
+
+print(user["age"] ?? "Unknown")
+
+Output:
+
+21
+
+
+var marks: [String: Int] = ["Maths": 90]
+
+marks["Science"] = 85
+
+print(marks["Science"] ?? 0)
+
+Output:
+
+85
+
+Update a dictionary value
+
+var marks: [String: Int] = [
+    "Maths": 90,
+    "Science": 85
+]
+
+marks["Maths"] = 95
+
+print(marks["Maths"] ?? 0)
+
+Output:
+
+95
+
+The existing value for "Maths" is replaced with 95.
+
+Remove a dictionary value
+
+Use removeValue(forKey:) to remove an entry.
+
+var user = [
+    "name": "Arun",
+    "city": "Chennai"
+]
+
+user.removeValue(forKey: "city")
+
+print(user["name"] ?? "Unknown")
+print(user["city"] ?? "Not found")
+
+Output:
+
+Arun
+Not found
+
+The "city" entry is removed, while "name" remains.
+
+Loop through a dictionary
+
+let marks: [String: Int] = [
+    "Maths": 90,
+    "Science": 85,
+    "English": 88
+]
+
+for (subject, mark) in marks {
+    print(subject, mark)
+}
+
+output:
+
+Maths 90
+English 88
+Science 85
+
+
+
+Practical iOS example
+
+let products = [
+    ["name": "iPhone", "price": "70000"],
+    ["name": "iPad", "price": "40000"],
+    ["name": "MacBook", "price": "90000"]
+]
+
+for product in products {
+    print(product["name"] ?? "Unknown")
+    print(product["price"] ?? "0")
+}
+
+output:
+
+iPhone
+70000
+iPad
+40000
+MacBook
+90000
