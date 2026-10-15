@@ -1,0 +1,76 @@
+Operators:
+
+Arithmetic Operators:
+
+var a = 10
+var b = 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a % b)
+
+Output:
+
+13
+7
+30
+1
+
+var a: Double = 10
+var b: Double = 3
+
+print(a / b)
+
+Output:
+
+3.3333333333333335
+
+Comparison operators:
+
+var a = 10
+var b = 5
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+
+Output:
+
+false
+true
+true
+false
+
+Logical operators:
+
+AND &&
+
+print(true && true)
+print(true && false)
+
+Output:
+
+true
+false
+
+OR ||
+
+print(true || false)
+print(false || false)
+
+Output:
+
+true
+false
+
+NOT !
+
+print(!true)
+print(!false)
+
+Output:
+
+false
+true
