@@ -1,0 +1,193 @@
+function:
+
+first Swift function
+
+func sayHello() {
+    print("Hello, Swift!")
+}
+
+sayHello()
+
+
+Output:
+
+Hello, Swift!
+
+
+call the function multiple times:
+
+func sayHello() {
+    print("Welcome!")
+}
+
+sayHello()
+sayHello()
+sayHello()
+
+
+Output:
+Welcome!
+Welcome!
+Welcome!
+
+
+Functions with parameters:
+
+func greet(name: String) {
+    print("Hello, \(name)!")
+}
+
+greet(name: "Arun")
+greet(name: "Priya")
+
+
+
+Output:
+Hello, Arun!
+Hello, Priya!
+
+
+Functions with multiple parameters:
+
+func calculateTotal(price: Double, quantity: Int) {
+    let total = price * Double(quantity)
+    print("Total price: ₹\(total)")
+}
+
+calculateTotal(price: 100.0, quantity: 3)
+
+
+
+Output:
+Total price: ₹300.0
+
+
+Return values:
+
+func add(a: Int, b: Int) -> Int {
+    return a + b
+}
+
+let result = add(a: 10, b: 20)
+
+print(result)
+
+
+
+Output:
+30
+
+
+func getPrice() -> Int {
+    return 500
+}
+
+let price = getPrice()
+let finalPrice = price + 100
+
+print(finalPrice)
+
+
+Output:
+600
+
+
+Functions with parameters and return values:
+
+func multiply(a: Int, b: Int) -> Int {
+    return a * b
+}
+
+let answer = multiply(a: 5, b: 4)
+
+print("Answer: \(answer)")
+
+
+
+Output:
+Answer: 20
+
+Argument labels in Swift:
+
+func greet(name: String) {
+    print("Hello, \(name)")
+}
+
+greet(name: "Kumar")
+
+
+Output:
+Hello, Kumar
+
+
+//Here, name is used both inside the function and when calling it.
+//Using a different argument label
+//You can make the function call read more naturally.
+
+func greet(to name: String) {
+    print("Hello, \(name)!")
+}
+
+greet(to: "Kumar")
+
+
+Output:
+Hello, Kumar!
+
+
+In "to name":
+
+- "to" is the argument label used when calling the function.
+- "name" is the parameter name used inside the function.
+Removing an argument label with "_"
+Use "_" when you want to call the function without writing the argument label.
+
+func square(_ number: Int) -> Int {
+    return number * number
+}
+
+print(square(5))
+
+
+
+Output:
+25
+
+
+Notice: that we write square(5), not square(number: 5).
+
+Practical iOS Developer examples:
+
+Login validation:
+
+func validateLogin(email: String, password: String) -> Bool {
+    if email.isEmpty || password.isEmpty {
+        return false
+    }
+
+    return true
+}
+
+let isValid = validateLogin(email: "user@example.com",password: "abc123")
+
+print(isValid)
+
+
+
+Output:
+true
+
+Calculate a shopping cart total:
+
+func cartTotal(price: Double, quantity: Int) -> Double {
+    return price * Double(quantity)
+}
+
+let total = cartTotal(price: 250.0, quantity: 4)
+
+print("Cart total: ₹\(total)")
+
+
+
+Output:
+Cart total: ₹1000.0
